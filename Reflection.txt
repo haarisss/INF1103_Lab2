@@ -1,0 +1,11 @@
+Self-Reflection: Saving the Final Inventory Count
+
+This hits Docker's ephemeral filesystem — containers don't have persistent storage by default.
+
+I actually saw the contrast between Part 3 and Part 6 of this lab. In Part 3, I used a volume mount (-v "${PWD}:/usr/src/app"), linking my local folder into the container. In Part 6, I ran my custom image (docker run --rm -it inf1003-labs-smart-auditor) with no mount — auditor.py was baked in via COPY instead. Since I also used --rm, Docker deletes the entire container (and anything written inside it) the moment it stops.
+
+So if my script wrote the final inventory count to a file inside the container's own filesystem, that file would exist briefly and then vanish with the container — it would never reach my Mac.
+
+The fix is the same idea from Part 3: a volume mount. Anything written to a mounted path is actually being written to my host machine, not just inside the container. The underlying limitation is that containers are meant to be temporary and disposable — persistent data has to live outside the container, via volume mounts or Docker volumes.
+
+In short, Docker containers are disposable by design — great for keeping environments clean and consistent, but not for storing data long-term. If this were a real inventory system, I'd need to mount a volume (or use a Docker volume) so the final count actually persists on the host machine instead of disappearing with the container.
