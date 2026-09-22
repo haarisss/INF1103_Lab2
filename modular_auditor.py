@@ -13,6 +13,20 @@ def get_valid_input():
 
     return int(user_input)
 
+def process_delivery(current_total, new_value):
+    """Adds new_value to current_total and returns the new total."""
+    return current_total + new_value
+
+
+def calculate_tax(amount):
+    """Returns 10% tax on the given delivery amount."""
+    return amount * 0.10
+
+
+def generate_report(total_units, failed_attempts):
+    """Prints the final summary."""
+    print(f"Total Deliveries Processed: {total_units}.")
+    print(f"Number of Failed/Rejected Entries: {failed_attempts}.")
 
 inventory = 0
 failed_entries = 0
