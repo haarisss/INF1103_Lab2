@@ -1,3 +1,7 @@
+
+
+LAB 2:
+
 Self-Reflection: Saving the Final Inventory Count
 
 This hits Docker's ephemeral filesystem — containers don't have persistent storage by default.
@@ -9,3 +13,19 @@ So if my script wrote the final inventory count to a file inside the container's
 The fix is the same idea from Part 3: a volume mount. Anything written to a mounted path is actually being written to my host machine, not just inside the container. The underlying limitation is that containers are meant to be temporary and disposable — persistent data has to live outside the container, via volume mounts or Docker volumes.
 
 In short, Docker containers are disposable by design — great for keeping environments clean and consistent, but not for storing data long-term. If this were a real inventory system, I'd need to mount a volume (or use a Docker volume) so the final count actually persists on the host machine instead of disappearing with the container.
+
+
+
+LAB 3:
+
+Moving from the monolithic loop of Week 2 to a modular design in Week 3 made me realize how essential functions are for building scalable applications. 
+
+By writing a dedicated calculate_tax function that simply returns a value rather than printing it, the calculation logic is completely isolated from the user interface.
+
+If business needs shift tomorrow such as the store manager wanting to save tax records to an external file, log them to a database, or format them differently in our automated Docker environment then,
+
+we only need to change the single line of code handling the output. 
+
+The core calculate_tax logic remains completely untouched. 
+
+This isolation (separation of concerns) prevents bugs, simplifies debugging, and ensures the code can grow smoothly when new features like custom discounts or advanced reporting are introduced in the future.
