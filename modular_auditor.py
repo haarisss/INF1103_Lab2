@@ -1,25 +1,39 @@
+def get_valid_input():
+    """Prompts for input. Returns a valid int quantity, or the string 'quit'."""
+    user_input = input("Enter stock quantity (or type 'quit' to exit): ")
+
+    if user_input == "quit":
+        return "quit"
+
+    if not user_input.lstrip('-').isdigit():
+        return None  # signals invalid input
+
+    if int(user_input) < 0:
+        return None  # signals invalid input
+
+    return int(user_input)
+
+
 inventory = 0
 failed_entries = 0
 
-while (user_input := input("Enter stock quantity (or type 'quit' to exit): ")) != "quit":
-    if not user_input.lstrip('-').isdigit():
-        print("Error: Invalid input. Please enter a valid number.")
+while True:
+    result = get_valid_input()
+
+    if result == "quit":
+        break
+
+    if result is None:
+        print("Error: Invalid input. Please enter a valid whole number ≥ 0.")
         failed_entries += 1
         continue
 
-    elif int(user_input) < 0:
-        print("Error: Quantity cannot be negative.")
-        failed_entries += 1
-        continue
-    
-    else:
-        quantity = int(user_input)
-        inventory += quantity
+    inventory = process_delivery(inventory, result)
+    tax = calculate_tax(result)
+    print(f"Delivery of {result} accepted. Tax on this delivery: {tax:.2f}")
 
-        if inventory > 500:
-            print("Overstock alert! Inventory exceeds 500 units.")
-            break
-    
+    if inventory > 500:
+        print("Overstock alert! Inventory exceeds 500 units.")
+        break
 
-print(f"Total Units Processed: {inventory}.")
-print(f"Number of Failed/Rejected Entries: {failed_entries}.")
+generate_report(inventory, failed_entries)
