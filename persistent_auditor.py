@@ -1,8 +1,8 @@
 def load_inventory():
     try:
         file = open("inventory.txt", "r")
-        content = file.read()
-        content = int(content)
+        first_line = file.readline()
+        content = int(first_line)
         file.close()
         return content
     except FileNotFoundError:
@@ -45,7 +45,7 @@ def generate_report(total_units, failed_attempts):
     print(f"Total Deliveries Processed: {total_units}.")
     print(f"Number of Failed/Rejected Entries: {failed_attempts}.")
 
-inventory = 0
+inventory = load_inventory()
 failed_entries = 0
 history = []
 
