@@ -41,6 +41,7 @@ def generate_report(total_units, failed_attempts):
 
 inventory = 0
 failed_entries = 0
+history = []
 
 while True:
     result = get_valid_input()
@@ -54,11 +55,13 @@ while True:
         continue
 
     inventory = process_delivery(inventory, result)
+    history.append(result)
     tax = calculate_tax(result)
     print(f"Delivery of {result} accepted. Tax on this delivery: {tax:.2f}")
 
     if inventory > 500:
         print("Overstock alert! Inventory exceeds 500 units.")
         break
-
+    
+print("history:",history)
 generate_report(inventory, failed_entries)
