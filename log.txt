@@ -1,3 +1,81 @@
+commit d36e72cbcbdfd6d318d1be2baf15ab4e1b2b4dbd
+Author: Haaris <2603207@sit.singaporetech.edu.sg>
+Date:   Fri Sep 25 12:09:22 2026 +0800
+
+    Update Dockerfile for persistent_auditor.py and rebuild image
+
+commit d59ea69c6728f369176a631226e1a001e808606c
+Author: Haaris <2603207@sit.singaporetech.edu.sg>
+Date:   Fri Sep 25 11:56:11 2026 +0800
+
+    Fix load_inventory to use readline and correctly persist total across runs
+
+commit 0e93d1bf8a932180c8827bcc245900edf1afea6a
+Author: Haaris <2603207@sit.singaporetech.edu.sg>
+Date:   Fri Sep 25 11:48:21 2026 +0800
+
+    Added save_inventory function and persist data to inventory.txt
+
+commit 815629a0f3aba5a2168f9b53168415e33bca81ff
+Author: Haaris <2603207@sit.singaporetech.edu.sg>
+Date:   Fri Sep 25 11:15:14 2026 +0800
+
+    Added history list to track all valid transactions
+
+commit ee98fd733c94347caa80c978c0232ed2432a7685
+Author: Haaris <2603207@sit.singaporetech.edu.sg>
+Date:   Fri Sep 25 11:02:23 2026 +0800
+
+    Added inventory_load function
+
+commit 73567f5fa19befa6e06099ae9e85ca432c24907c
+Author: Haaris <2603207@sit.singaporetech.edu.sg>
+Date:   Wed Sep 23 01:58:43 2026 +0800
+
+    Updated reflection.txt to incude lab 3 reflection
+
+commit ffc312266c22237ed70dd8338c7d3b3228bef0e6
+Author: Haaris <2603207@sit.singaporetech.edu.sg>
+Date:   Wed Sep 23 01:51:22 2026 +0800
+
+    Updated dockerfile to use modular_auditor.py
+
+commit 61ec2efb517469b888ae897ced41073b0c81f163
+Author: Haaris <2603207@sit.singaporetech.edu.sg>
+Date:   Wed Sep 23 01:17:31 2026 +0800
+
+    Added process_delivery,calculate_tax and generate_report_functions
+
+commit e86d6701d19a27d88b829dc4061cfbe8ba8b47d8
+Author: Haaris <2603207@sit.singaporetech.edu.sg>
+Date:   Wed Sep 23 01:16:15 2026 +0800
+
+    Refactor input validation into get_valid_input()
+
+commit fb2ea53c51ed83b19a21963b7ce63bcc1f18fd30
+Author: Haaris <2603207@sit.singaporetech.edu.sg>
+Date:   Wed Sep 23 00:48:28 2026 +0800
+
+    Copying week 2 auditor.py logic into modular_auditor.py as starting point
+
+commit 4ed2b2ac2b9c0b9f333c3e367083d0b23ac0abe2
+Author: Haaris <2603207@sit.singaporetech.edu.sg>
+Date:   Wed Sep 16 17:35:56 2026 +0800
+
+    Added repository link in new text file
+
+commit b31e058e0e94f82999f3794dafaa7b3191604616
+Author: Haaris <2603207@sit.singaporetech.edu.sg>
+Date:   Wed Sep 16 17:32:00 2026 +0800
+
+    Added self-reflection
+
+commit b5311b067cfa858ad8d498b7bbd1433dc1f8d1ce
+Author: Haaris <2603207@sit.singaporetech.edu.sg>
+Date:   Wed Sep 16 17:08:03 2026 +0800
+
+    Added Dockerfile for custom image
+
 commit 8e971829da6a2e66f25e86ed1bc3405060f44ca1
 Author: Haaris <2603207@sit.singaporetech.edu.sg>
 Date:   Wed Sep 16 16:33:13 2026 +0800

@@ -29,3 +29,13 @@ we only need to change the single line of code handling the output.
 The core calculate_tax logic remains completely untouched. 
 
 This isolation (separation of concerns) prevents bugs, simplifies debugging, and ensures the code can grow smoothly when new features like custom discounts or advanced reporting are introduced in the future.
+
+
+Lab 4:
+Having calculate_tax return a value instead of printing it directly keeps the function reusable and flexible. If it printed the tax internally, that's the only thing it could ever do with that number — the moment the manager wants something different (like writing the tax to a file, adding it to a running total, or including it in inventory.txt), the function would need to be rewritten.
+
+By returning the value instead, I get to decide outside the function what happens to it. In my code, calculate_tax(result) returns a number that I then use in a print() statement myself — but that same returned value could just as easily be written to a file, summed into a tax total, or passed into another function, without touching calculate_tax at all.
+
+This connects directly to what I saw with save_inventory() this week: the moment I needed the manager's data to persist to a file instead of just appearing on screen, having functions that return values (rather than print them internally) meant I could plug that returned data into a completely different output (a file) with no changes to the original function. If calculate_tax printed internally, I'd have no way to also save it — printing and saving would conflict, since a function can typically only do one or the other cleanly.
+
+Conclusion: Returning values keeps functions single-purpose and decoupled from how their output is eventually used — screen, file, or otherwise — which is exactly what "pure" functions and modular design are meant to achieve.
