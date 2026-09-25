@@ -8,7 +8,13 @@ def load_inventory():
     except FileNotFoundError:
         return 0
 
-
+def save_inventory(total, history):
+    file = open("inventory.txt", "w")
+    file.write(str(total) + "\n")
+    file.write(str(history) + "\n")
+    file.close()
+    
+    
 def get_valid_input():
     """Prompts for input. Returns a valid int quantity, or the string 'quit'."""
     user_input = input("Enter stock quantity (or type 'quit' to exit): ")
@@ -63,5 +69,5 @@ while True:
         print("Overstock alert! Inventory exceeds 500 units.")
         break
     
-print("history:",history)
+save_inventory(inventory, history)
 generate_report(inventory, failed_entries)
