@@ -1,3 +1,15 @@
+commit 0783afa5e3acf1c16e99ba49a85cdb97da7672dd
+Author: Haaris <2603207@sit.singaporetech.edu.sg>
+Date:   Wed Sep 30 23:43:18 2026 +0800
+
+    Fix load_inventory and input validation
+
+commit cb0699505dafa3c829737087b2a06e050335c385
+Author: Haaris <2603207@sit.singaporetech.edu.sg>
+Date:   Fri Sep 25 12:22:57 2026 +0800
+
+    Reflection for lab 4 done
+
 commit d36e72cbcbdfd6d318d1be2baf15ab4e1b2b4dbd
 Author: Haaris <2603207@sit.singaporetech.edu.sg>
 Date:   Fri Sep 25 12:09:22 2026 +0800
