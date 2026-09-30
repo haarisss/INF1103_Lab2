@@ -1,3 +1,15 @@
+commit 47f69bd53db90896ed47fbc413ed8942ca99424e
+Author: Haaris <2603207@sit.singaporetech.edu.sg>
+Date:   Thu Oct 1 00:25:56 2026 +0800
+
+    made final changes and ran docker again
+
+commit 5e0761a1a6332ba6cc8e70a8107c22bb53c6f166
+Author: Haaris <2603207@sit.singaporetech.edu.sg>
+Date:   Thu Oct 1 00:25:08 2026 +0800
+
+    made final changes and committing
+
 commit 0783afa5e3acf1c16e99ba49a85cdb97da7672dd
 Author: Haaris <2603207@sit.singaporetech.edu.sg>
 Date:   Wed Sep 30 23:43:18 2026 +0800
