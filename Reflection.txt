@@ -39,3 +39,8 @@ By returning the value instead, I get to decide outside the function what happen
 This connects directly to what I saw with save_inventory() this week: the moment I needed the manager's data to persist to a file instead of just appearing on screen, having functions that return values (rather than print them internally) meant I could plug that returned data into a completely different output (a file) with no changes to the original function. If calculate_tax printed internally, I'd have no way to also save it — printing and saving would conflict, since a function can typically only do one or the other cleanly.
 
 Conclusion: Returning values keeps functions single-purpose and decoupled from how their output is eventually used — screen, file, or otherwise — which is exactly what "pure" functions and modular design are meant to achieve.
+
+Lab 5:
+I gained valuable hands-on experience building a fully interactive inventory management system. A key part of my learning process was discovering how to design and manage multiple modular functions simultaneously, including adding items, updating stock, searching records, and displaying data within a structured menu system.
+
+Keeping the application flow smooth while coordinating these distinct actions taught me how to write cleaner, more organized code. Building an interactive project that bridges core programming logic with enterprise-grade tools like Docker volumes has given me a much stronger foundation in both application development and DevOps operational practices.
