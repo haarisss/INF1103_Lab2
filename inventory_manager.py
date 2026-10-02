@@ -74,8 +74,15 @@ def load_inventory():
     else:
         inventory = []
         print("No inventory.json found. Starting with empty inventory.")
+        
 
+def save_inventory():
+    file = open("inventory.json", "w")
+    json.dump(inventory, file, indent=4)
+    file.close()
+    print("Inventory saved successfully to inventory.json.")
 
     
 load_inventory()
-display_all()
+add_product()
+save_inventory()
